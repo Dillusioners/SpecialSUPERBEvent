@@ -40,7 +40,7 @@ public class SuperB_EVENT_GUI implements ActionListener {
         C_func_buttons[7] = C_equal;
         C_func_buttons[8] = C_Perc;
         //Adding all number and function buttons to the afore made arrays and giving them necessary attributes
-        for(int i = 1; i < 9; i++){
+        for(int i = 0; i < 9; i++){
             C_func_buttons[i].addActionListener(this);
             C_func_buttons[i].setFont(C_font);
             C_func_buttons[i].setFocusable(false);
@@ -101,7 +101,8 @@ public class SuperB_EVENT_GUI implements ActionListener {
         }
             if(e.getSource() == C_decimal)
                 C_text_field.setText(C_text_field.getText().concat("."));
-            if(e.getSource() == C_add){
+
+        if(e.getSource() == C_add){
                 C_a = Double.parseDouble(C_text_field.getText());
                 C_oper = '+';
                 C_text_field.setText("");
